@@ -50,7 +50,7 @@ const ExpenseForm = (props) => {
     event.preventDefault(); // a default behavior of the browser is to reload the page when a form is submitted. event.preventDefault avoids that.
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
     props.onSaveExpenseData(expenseData);
